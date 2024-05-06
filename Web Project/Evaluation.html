@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset = "utf-8">
+    <title>Evaluation page</title>
+    <link rel="stylesheet" href="Header_and_footer.css">
+    <link rel="stylesheet" href="CommonStyle.css">
+    <link rel="stylesheet" href="Evaluation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="Customer_Script/script2.js"></script>
+</head>
+
+<body onload="onload()">
+
+      <header>
+        <nav class="global">
+         <img src="images/Logo.png" alt="website logo" id="logo">
+          <ul>
+            <li><a href="index.html" accesskey="h"> Home </a></li>
+            <li><a class="active" href="Customer_Dashboard.html" accesskey="c"> Customer's dashboard </a></li>
+            <li><a href="Owner_Dashboard.html" accesskey="o"> Owner dashboard </a></li>
+          </ul>
+         </nav>
+
+        <ul class="breadcrumbs">
+          <li><a href="index.html"> Home </a></li>
+          <li><a href="Customer_Dashboard.html"> Customer's dashboard </a></li>
+          <li><a href="Restaurant.html"> Restaurant </a></li>
+          <li><a href="Cart_Page.html"> Cart </a></li>
+          <li class="current"> Evaluation </li>
+        </ul>
+      </header>
+      <button onclick="darkmode()" id="icon" type="button" class="Switch-theme">Switch Theme</button>
+<main>
+
+  <div class="intro2">
+    <h1 id="My_review">My review</h1> 
+  </div>
+
+  <div class="f"> 
+<form id="Form_E" action="#" method="post">
+    <div class="previousRestaurant">
+        <label  for="PR" >Tap To Rate Previous Restaurant:</label>
+        <select id="PR" name="previousRestaurant">
+            <option id="default" value="" selected disabled hidden >Previous Restaurant</option>
+            <option value="restaurant1">Tasty Bites</option>
+            <option value="restaurant2">Pizzalicious</option>
+            <option value="restaurant3">Green Leaf</option>
+            <option value="restaurant1">ShawarmaBite</option>
+        </select>
+    </div>
+    
+    <div>
+        <label for="rating" id="rateNum">Rating <i>(from 1 to 5)</i>:</label>
+        <input class="input-rating" type="number" name="rating" id="rating" min="1" max="5" >
+    </div>
+
+    <div id="photo">
+        <img src="images/feedback.png" alt="">
+    </div>
+    
+    <div>
+        <label for="feedback" id="review">Feedback:</label><br>
+        <textarea class="input-rating"  name="feedback" id="feedback" rows="20" cols="50" ></textarea>
+    </div>
+    <div>
+       <input id="BUTTON" type="submit" value="SEND">
+    </div>
+</form>
+</div>
+
+</main>
+
+<footer>
+    <p id="Contact"> Contact with us</p>
+    <p id="Number"> +993 05533033560 </p>
+    <div class="socials">        
+        <a href="#"><i class="fa fa-twitter"></i></a> 
+        <a href="#"><i class="fa fa-facebook"></i></a> 
+        <a href="#"><i class="fa fa-instagram"></i></a>
+    </div>
+    <p class="Copyright"> Copyright &copy; 2024 2Eat. All Rights Reserved</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+
+</html>

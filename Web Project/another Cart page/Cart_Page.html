@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Cart page</title>
+    <link rel="stylesheet" href="Cart_Page.css">
+    <link rel="stylesheet" href="Header_and_footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	 
+</head>
+
+<body>
+
+<header>
+    <nav class="global">
+        <img src="images/Logo.png" alt="website logo" id="logo">
+        <ul>
+            <li><a href="Home.html" accesskey="h"> Home </a></li>
+            <li><a class="active" href="Customer_Dashboard.html" accesskey="c"> Customer's dashboard </a></li>
+            <li><a href="Owner_Dashboard.html" accesskey="o"> Owner dashboard </a></li>
+        </ul>
+    </nav>
+
+    <ul class="breadcrumbs">
+        <li><a href="Home.html"> Home </a></li>
+        <li><a href="Customer_Dashboard.html"> Customer's dashboard </a></li>
+        <li><a href="Restaurant.html"> Restaurant </a></li>
+        <li class="current"> Cart </li>
+    </ul>
+</header>
+
+<main>
+    <div class="intro">
+        <h1 id="My-cart">My Cart</h1>
+        <button class="clear" type="button">Clear Cart</button>
+    </div>
+
+    <!-- Cart items will be displayed here -->
+    <div id="cart" class="Order">
+        <div class="flex-container">
+            <!-- Cart items will be dynamically inserted here -->
+        </div>
+    </div>
+
+    <div class="total">
+        <p id="Total">
+            <strong>Total</strong><br>
+            0SR <!-- Initial total -->
+        </p>
+    </div>
+
+    <div id="line">
+        <hr>
+        <a href="Evaluation.html" class="checkout">Checkout</a>
+    </div>
+</main>
+
+<footer>
+    <p id="Contact"> Contact with us</p>
+    <p id="Number"> +993 05533033560 </p>
+    <div class="socials">
+        <a href="#"><i class="fa fa-twitter"></i></a>
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-instagram"></i></a>
+    </div>
+    <p class="Copyright"> Copyright &copy; 2024 2Eat. All Rights Reserved</p>
+</footer>
+
+<script>
+
+
+    function calculateTotal() {
+        let total = 0;
+        const items = document.querySelectorAll('.item');
+        items.forEach(item => {
+            const quantity = parseInt(item.querySelector('.counter').textContent);
+            const price = parseInt(item.querySelector('.sr').textContent);
+            total += quantity * price;
+        });
+        return total;
+    }
+
+    function updateTotal() {
+        const totalElement = document.getElementById('Total');
+        const total = calculateTotal();
+        totalElement.innerHTML = `<strong>Total</strong><br>${total}SR`;
+    }
+
+    const cartItemsJson = localStorage.getItem('cartItems');
+    if (cartItemsJson) {
+        const cartItems = JSON.parse(cartItemsJson);
+
+
+        const cartDiv = document.querySelector('.flex-container');
+        cartItems.forEach(item => {
+            const itemHTML = `
+            <div class="item">
+                <div class="meal_info">
+                    <img src="${item.image}" class="meal" alt="${item.text}">
+                    <h2>${item.text}</h2>
+					
+                </div>
+                <div class="quantity">
+                    <button style="color: white;" class="decreaseBtn">&#10134;&#xfe0e;</button>
+                    <span class="counter">${item.quantity}</span>
+                    <button style="color: white;" class="increaseBtn">&#10133;&#xfe0e;</button>
+                </div>
+                <div>
+                    <button class="x" type="button">&#10006;</button>
+                </div>
+                <span class="sr">${item.price}SR</span>
+            </div>
+            `;
+            cartDiv.innerHTML += itemHTML;
+        });
+
+
+        const xButtons = document.querySelectorAll('.x');
+        xButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                button.parentElement.parentElement.remove();
+                updateTotal();
+            });
+        });
+
+        const quantityButtons = document.querySelectorAll('.quantity button');
+        quantityButtons.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const counter = btn.parentElement.querySelector('.counter');
+                let value = parseInt(counter.textContent);
+                if (btn.classList.contains('increaseBtn')) {
+                    value++;
+                } else {
+                    if (value > 1) {
+                        value--;
+                    }
+                }
+                counter.textContent = value;
+                updateTotal();
+            });
+        });
+    } else {
+
+        const cartDiv = document.querySelector('.flex-container');
+        cartDiv.innerHTML = "<p>Your cart is empty.</p>";
+    }
+
+
+    const clearButton = document.querySelector('.clear');
+    clearButton.addEventListener('click', () => {
+        const cartDiv = document.querySelector('.flex-container');
+        cartDiv.innerHTML = "<p>Your cart is empty.</p>";
+        localStorage.removeItem('cartItems'); 
+        updateTotal();
+    });
+
+
+    const checkoutButton = document.querySelector('.checkout');
+    checkoutButton.addEventListener('click', () => {
+        const total = calculateTotal();
+        alert(`Thank you for your order! Your total is: ${total}SR`);
+        localStorage.removeItem('cartItems');
+        updateTotal();
+    });
+
+    updateTotal();
+</script>
+
+
+</body>
+
+</html>

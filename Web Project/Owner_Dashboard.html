@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+    
+<head>    
+    <title>Owner Dashboard</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="Header_and_footer.css">
+    <link rel="stylesheet" href="CommonStyle.css">
+    <link rel="stylesheet" href="Owner_Dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body onload="onload()">
+
+
+<header>
+    <nav class="global">
+     <img src="images/Logo.png" alt="website logo" id="logo">
+      <ul>
+          <li><a href="index.html" accesskey="h"> Home </a></li>
+          <li><a href="Customer_Dashboard.html" accesskey="c"> Customer's dashboard</a></li>
+          <li><a class="active" href="Owner_Dashboard.html" accesskey="o"> Owner dashboard </a></li>
+      </ul>
+    </nav>
+
+    <ul class="breadcrumbs">
+      <li><a href="index.html"> Home </a></li>
+      <li class="current"> Owner dashboard </li> 
+    </ul>
+    <button onclick="darkmode()" id="icon" type="button" class="Switch-theme">Switch Theme</button>
+ </header>
+
+
+ <main>     
+
+<div class="intro">
+    <h1 id="Owner_Dashboard">Owner Dashboard</h1> 
+</div>
+
+<div class="buttons-container">
+    <a href="Add_new_cuisine.html" class="button">Add a new cuisine</a>
+    <a href="Make_delet_Offer.html" class="button">Make or delete offers</a>
+</div>
+
+ 
+<section class="Meals_intro">
+    <h2 id="Meals">Meals</h2>
+</section>
+
+    <div class="meal-container">
+        <!-- Meal 1 -->
+        <div class="meal">
+            <img src="images/soup.jpg" alt="Meal 1">
+            <h3>Creamy Mushroom Soup</h3>
+            <p>Enjoy our creamy mushroom soup, a carefully selected blend of rich mushrooms in 
+            a smooth creamy base, served with a slice of bread. Satisfy your cravings with every spoonful.</p>
+        </div>
+
+        <!-- Meal 2 -->
+        <div class="meal" >
+            <img src="images/pasta.jpg" alt="Meal 2">
+            <h3>Delicious Red Pasta</h3>
+            <p>Enjoy our delicious Red Pasta, featuring perfectly cooked pasta immersed in homemade tomato sauce,
+                 garnished with basil leaves for an irresistible taste.</p>
+        </div>
+
+        <!-- Meal 3 -->
+        <div class="meal">
+            <img src="images/salad.jpg" alt="Meal 3">
+            <h3>Burrata Cheese Salad</h3>
+            <p>Enjoy our Burrata Cheese Salad, combining the creamy flavor of burrata cheese with ripe 
+            tomatoes, fresh basil leaves, and a drizzle of balsamic glaze. </p>
+        </div>
+
+         <!-- Meal 4 -->
+         <div class="meal">
+            <img src="images/pizza.jpg" alt="Meal 4">
+            <h3>Margherita Pizza: A Taste of Italy</h3>
+            <p>Enjoy our Margherita Pizza with thin crust, tangy tomato sauce, creamy mozzarella, and fresh basil. It's a classic favorite!</p>
+        </div>
+         <!-- Meal 5-->
+         <div class="meal">
+            <img src="images/cron.jpeg" alt="Meal 5">
+            <h3>Grilled Corn with  Ranch Sauce </h3>
+            <p>Savor our grilled corn, seasoned to perfection and served with creamy ranch sauce. 
+                It's the perfect blend of smoky flavor and creamy indulgence.</p>
+        </div>
+
+          <!-- Meal 6-->
+          <div class="meal">
+            <img src="images/hotedrink.png" alt="Meal 6">
+            <h3>Hot Signature Drink</h3>
+            <p>Enjoy our comforting hot beverage, from rich hot chocolate to aromatic coffee .</p>
+        </div>
+    </div>
+    
+</main>
+
+
+
+<footer>
+    <p id="Contact"> Contact with us</p>
+    <p id="Number"> +993 05533033560 </p>
+    <div class="socials">        
+        <a href="#"><i class="fa fa-twitter"></i></a> 
+        <a href="#"><i class="fa fa-facebook"></i></a> 
+        <a href="#"><i class="fa fa-instagram"></i></a>
+    </div>
+    <p class="Copyright"> Copyright &copy; 2024 2Eat. All Rights Reserved</p>
+</footer>
+<script src="script.js"></script>
+
+<script>
+
+    
+function retrieveDataFromLocalStorage() {
+    let localItems = JSON.parse(localStorage.getItem("localItem"));
+    return localItems;
+}
+
+function displayDataInDiv() {
+    
+    let localItems = retrieveDataFromLocalStorage();
+    if (localItems !== null && localItems.length > 0) {
+        let mealListDiv = document.querySelector(".meal-container");
+        mealListDiv.innerHTML = "";
+
+        for (let i = 0; i < localItems.length; i += 5) {
+            let mealName = localItems[i];
+            let mealPrice = localItems[i + 1];
+            let mealCalories = localItems[i + 2];
+            let mealDescription = localItems[i + 3];
+            let mealPhoto = localItems[i + 4];
+
+
+            let mealDiv = document.createElement("div");
+            mealDiv.classList.add("meal");
+
+            mealDiv.innerHTML = `
+                <img src="${mealPhoto}" alt="${mealName}">
+                <h3>${mealName}</h3>
+                <p>Price: ${mealPrice}</p>
+                <p>Calories: ${mealCalories}</p>
+                <p>${mealDescription}</p>
+            `;
+
+
+            mealListDiv.appendChild(mealDiv);
+    } 
+
+
+    } else {
+        
+        let mealListDiv = document.querySelector(".meal-container");
+        mealListDiv.innerHTML = "";
+
+              var message = document.createElement("p");
+              message.textContent = "No meals to display.";
+              message.style.color = "var(--button1)";
+              message.style.fontSize = "2em";
+              mealListDiv.appendChild(message);
+            }
+}
+
+document.addEventListener("DOMContentLoaded", displayDataInDiv);
+
+
+</script>
+</body>
+</html>

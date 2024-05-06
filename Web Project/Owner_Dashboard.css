@@ -1,0 +1,55 @@
+.meal-container {
+    display: flex; /* Enable flexbox layout */
+    overflow-x: auto; /* Enable horizontal scrolling */
+    padding: 40px;
+    background-color:var(--rest-color);
+    transition: 0.5s;
+    
+}
+.meal-container::-webkit-scrollbar {
+   width: 0;
+   
+}
+
+/* Style for each meal */
+.meal {
+    flex: 0 0 auto; /* Allow shrinking but not growing or shrinking */
+    width: 300px; /* Width of each meal */
+    height: 450px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding: 20px;
+    border: 0.5px solid  midnightblue;
+    border-radius: 5px;
+    background-color: #dcd5ff;
+    box-shadow: 2px 2px 8px 7px #210c8e35, 6px 6px 7px 0 #ccc;/* Add shadow to each meal item */
+    transition-property: background-color,margin-right,margin-left;
+    transition-duration: 0.5s;
+   
+}
+.meal:hover{
+    background-color: #ffffff;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.meal img {
+    width: 100%; /* Make the image fill the container */
+    height: 250px;
+    border-radius: 5px;
+    border: 2px solid #fafafa; 
+    box-shadow: 2px 2px 4px rgba(72, 72, 72, 0.748); /* Add shadow to each imge item */
+    
+}
+.meal h3 {
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 10px;
+   
+}
+.meal p {
+    margin-top: 10px;
+    font-size: 16px;
+    text-align: justify;
+}

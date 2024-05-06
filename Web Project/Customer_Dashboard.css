@@ -1,0 +1,113 @@
+main {
+    background-color: var(--rest-color);
+}
+
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  gap: 4%;
+  flex-wrap: wrap;
+  background-color: var(--rest-color);
+  justify-content: space-around;
+  padding: 2%;
+}
+  
+.restaurant {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 5%;
+  padding: 10px;
+  min-width: 25%;
+  max-width: 25%;
+  font-size: 110%;
+  background-color: #c1b4ff;
+  border: solid;
+  color: #140132;
+  border-radius: 25px;
+  border-width: 5px;
+  box-shadow: -1px 4px 15px #765ca1;
+  line-height: 1.5em;
+  text-align: center;
+  padding-top: 2%;
+  justify-content: space-around;
+  transition: 1s;
+  height: 23em;
+}
+
+.restaurant:hover {
+  transform: scale(1.15,1.15);
+}
+
+.restaurant img { 
+  width: 220px;
+  height: 170px;
+  border-radius: 20px;
+}
+
+.rate {
+  font-size: larger;
+  font-weight: bold;
+  color: #140132;
+}
+
+.intro {
+  font-size: 200%; 
+  font-weight: lighter; 
+  padding: 2% 0;
+  color: #FFF;
+  background-image: url(images/Customer.jpg);
+  background-size: cover;
+  height: 150px;
+}
+
+#Restaurants { 
+  border-bottom: solid;
+  border-width: 5px;
+  width: 6em;
+  text-align: center;
+}
+
+.text{
+  color: black;
+  text-align: center;
+
+}
+
+main {
+  background-color:var(--rest-color) ;
+}
+
+.hide {display: none;}
+
+#more{
+  padding: 20px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: var(--button1) ; 
+  color: var(--font-color1);
+  text-align: center;
+  text-decoration: none;
+  font-size: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: relative;
+  left: 560px;
+  bottom: 30px;
+  cursor: pointer;
+  font-weight:300;
+}
+
+#more:hover {
+  background-color: #9489a8;
+  box-shadow: -1px 7px 15px #ccc;     
+}  
+
+
+.disc{display: none;}
+
+#currentWeekDate{
+  font-weight: bold;
+  color: var(--primary-color);
+  font-size : 25px;
+  padding-left: 2%;
+}

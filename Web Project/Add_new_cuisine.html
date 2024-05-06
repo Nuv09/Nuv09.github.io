@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>Add a new cuisine</title>
+    <link rel="stylesheet" href="Header_and_footer.css">
+    <link rel="stylesheet" href="CommonStyle.css">
+    <link rel="stylesheet" href="formstyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body onload="onload()">
+
+
+    <header>
+        <nav class="global">
+            <img src="images/Logo.png" alt="website logo" id="logo">
+            <ul>
+                <li><a href="index.html" accesskey="h"> Home </a></li>
+                <li><a href="Customer_Dashboard.html" accesskey="c"> Customer's dashboard</a></li>
+                <li><a class="active" href="Owner_Dashboard.html" accesskey="o"> Owner dashboard </a></li>
+            </ul>
+        </nav>
+
+        <ul class="breadcrumbs">
+            <li><a href="index.html"> Home </a></li>
+            <li><a href="Owner_Dashboard.html"> Owner dashboard </a></li>
+            <li class="current"> Add a new cuisine </li>
+        </ul>
+        <button onclick="darkmode()" id="icon" type="button" class="Switch-theme">Switch Theme</button>
+    </header>
+
+    <main>
+
+
+        <div class="intro">
+            <h1 id="Cuisine">Cuisine</h1>
+        </div>
+
+        <div class="buttons-container">
+            <a href="Add_new_cuisine.html" class="button">Add a new cuisine</a>
+            <a href="Make_delet_Offer.html" class="button">Make or delete offers</a>
+        </div>
+
+        <section class="Form_intro">
+            <h2 class="Form1">Add New Cuisine</h2>
+        </section>
+
+        <div class="Form">
+            <form class="F" action="" method="post" enctype="multipart/form-data" name="form" id="form">
+
+                <div class="cell">
+                    <label for="meal_name">Name of Meal :</label>
+                    <input class="input-item" type="text" id="meal_name" name="meal_name">
+                </div>
+
+                <div class="Price_Cal">
+
+                    <div>
+                        <label for="meal_price">Price :</label>
+                        <input class="input-item" type="number" id="meal_price" name="meal_price">
+                    </div>
+
+                    <div>
+                        <label for="meal_calories" id="cal">Calories :</label>
+                        <input class="input-item" type="number" id="meal_calories" name="meal_calories">
+                    </div>
+
+                </div>
+
+                <div class="cell">
+                    <label for="meal_description">Description :</label>
+                    <textarea class="input-item" id="meal_description" name="meal_description" rows="10"
+                        cols="50"></textarea>
+                </div>
+
+
+
+                <div id="Aphoto">
+                    <label for="meal_photo">Upload photo</label>
+                    <input class="B" type="file" id="meal_photo" name="meal_photo">
+                </div>
+
+
+                <button class="B" type="submit" id="btn">Add Meal</button>
+
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+        <p id="Contact"> Contact with us</p>
+        <p id="Number"> +993 05533033560 </p>
+        <div class="socials">
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-instagram"></i></a>
+        </div>
+        <p class="Copyright"> Copyright &copy; 2024 2Eat. All Rights Reserved</p>
+    </footer>
+    <script src="script.js"></script>
+    <script src="script1.js"></script>
+</body>
+
+</html>

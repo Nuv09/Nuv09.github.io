@@ -1,0 +1,280 @@
+/* Style for Offers */
+
+@media only screen and (min-width: 601px) {
+
+#OurVision {
+    color: #FFF;
+    background-image: url(images/Home.png);
+    background-size: cover;
+    text-align: center; 
+    height: 400px;
+    font-size: 200%; 
+    font-weight: lighter; 
+    padding-top: 2%;
+}
+}
+
+
+#intro {
+    font-size: 300%; 
+    font-weight: lighter; 
+    background-color: var(--rest-color);
+    padding: 2% 0;
+    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+#Offers {
+    border-bottom: solid;
+    border-width: 5px;
+    width: 3em;
+    color: var(--font-color2);
+}
+
+.Offer-Container {
+    display: flex;
+    flex-direction: row;
+    gap: 4%;
+    flex-wrap: wrap;
+    background-color: var(--rest-color);
+    justify-content: space-around;
+    padding: 2%;
+}
+
+.button1 {
+    display: inline-block;
+    border: none;
+    border-radius: 8px;
+    background-color: rgb(27, 27, 132);
+    color: #fff;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 10px 16px;
+    margin-bottom: 2%;
+    text-decoration: none;
+}
+
+.button1:hover {
+    background-color: #9489a8;
+    box-shadow: -1px 7px 15px #ccc;     
+}  
+
+
+.Offer-image {
+    width: 225px;
+    height: 200px;
+    border-radius: 5px;
+    border: 2px solid #fafafa; 
+    box-shadow: 2px 2px 4px rgba(72, 72, 72, 0.748);
+}
+
+
+.Offer-info:hover {
+    transform: scale(1.15,1.15);
+}
+
+.text {
+    padding: 0 5%;
+}
+/* style for reviews */
+
+.container {
+    overflow: hidden;
+    padding: 50px 0 0;
+}
+
+.main-card {
+    display: flex;
+    justify-content: space-around;
+    width: 200%;
+    transition: 1s;
+}
+
+
+#two:checked ~ .main-card {
+    margin-left: -100%;
+}
+
+.cards {
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 20px;
+    justify-content: space-between;
+}
+
+.card {
+    width: 300px;
+    background: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 5px 10px var(--secondary-color);
+    transition: all 0.4s ease;
+    display: flex;
+}
+
+.card:hover {
+    transform: translateY(-15px);
+}
+
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.photo {
+    height: 130px;
+    width: 130px;
+    border-radius: 50%;
+    padding: 3px ;
+    background: #765ca1;
+    margin-bottom: 14px;
+}
+
+
+.photo img {
+    height: 100%;
+    width: 100%;
+    border: 3px solid #ffff;
+    border-radius: 50%;
+    object-fit: cover;
+    padding-left: 1px;
+    padding-top: 2px;
+  }
+
+.name{ 
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.Restauran {
+    font-size: 20px;
+    color: #765ca1;
+}
+
+.rate {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+  
+.checked {
+    color: orange;
+}
+
+.button {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
+
+.button label {
+    height: 15px;
+    width: 15px;
+    border-radius: 20px;
+    background: #fff;
+    margin: 0 4px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.button label:hover {
+    background-color: #9489a8;
+}
+
+  
+.button label.active {
+    width: 35px;
+    border: solid;
+    border-color: #765ca1;
+    border-width: 4px;
+}
+
+#one:checked ~ .button .one {
+    width: 35px;
+    border: solid;
+    border-color: #765ca1;
+    border-width: 4px;
+}
+
+#one:checked ~ .button .two {
+    width: 15px;
+}
+
+#two:checked ~ .button .one {
+    width: 15px;
+    border: solid;
+    border-color: #FFF;
+    border-width: 0;
+}
+
+#two:checked ~ .button .two {
+    width: 35px;
+    border: solid;
+    border-color: #765ca1;
+    border-width: 4px;
+}
+  
+input {
+    display: none;
+}
+
+
+@media only screen and (min-width: 601px) {
+    .Offer-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5%;
+        min-width: 25%;
+        max-width: 25%;
+        font-size: 110%;
+        color: #140132;
+        background-color: #dcd5ff;
+        border: solid;
+        border-radius: 25px;
+        border-width: 5px;
+        height: 35vw;
+        box-shadow: -1px 4px 15px #765ca1;
+        line-height: 1.5em;
+        padding-top: 2%;
+        justify-content: space-around;
+        transition: 1s;
+        text-align: center;
+        background-clip: none;
+    }
+}
+
+
+@media only screen and (max-width: 100%) {
+    .Offer-info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 5%;
+        min-width: 25%;
+        max-width: 25%;
+        font-size: 110%;
+        color: #140132;
+        background-color: #dcd5ff;
+        border: solid;
+        border-radius: 25px;
+        border-width: 5px;
+        height: 35vw;
+        box-shadow: -1px 4px 15px #765ca1;
+        line-height: 1.5em;
+        padding-top: 2%;
+        justify-content: space-around;
+        transition: 1s;
+        text-align: center;
+        background-clip: none;
+    }
+}

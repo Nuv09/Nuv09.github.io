@@ -1,0 +1,167 @@
+
+/* arrow hide for rating */
+
+input::-webkit-inner-spin-button,input::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+}
+
+main {
+    background-color: var(--rest-color);
+}
+
+#Form_E {
+    width: 95%;
+    padding: 50px 70px;
+    padding-bottom: 0%;
+    margin: 40px auto;
+    position: relative;
+    border: 10px solid transparent; 
+    color: #ffffff;
+    box-shadow: 2px 2px 8px 7px #210c8e35, 6px 6px 7px 0 #ccc;
+    background-color: #ffffff;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    width: 150px;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(26, 26, 131);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    text-transform: uppercase;
+}
+
+input[type="submit"]:hover {
+    background-color: #9489a8;
+    box-shadow: -1px 7px 15px #ccc;  
+}
+/* Label Styles */
+label {
+    font-family: Georgia, Times, 'Times New Roman', serif;
+    text-transform: uppercase;
+    color: rgb(27, 27, 139);
+    font-size: 22px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#rateNum {
+    width: 20%;
+}
+
+#review {
+    width: 10%;
+}
+
+div {
+    margin-bottom: 20px;
+    padding: 10px;
+}
+/* Select Styles */
+
+
+/* Rating Input Styles */
+
+.input-rating {
+    width: 20px;
+    margin-bottom: 10px;
+    border: 0.1px solid rgba(27, 27, 132, 0.212);
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    box-shadow: 4px 4px 7px 0 #f6f6f6;
+    background-color: #f4f4f4;
+}
+
+#rating {
+    width: 50px;
+    height: 50px;
+    padding: 0px 15px;
+    transition: width 0.3s;
+}
+
+#rating:hover {
+    width: 35px;
+    background-color: #ffffff;
+    box-shadow: 1px 1px 4px 4px #0c4b8e35, 4px 4px 7px 0 #ccc;
+}
+
+#feedback {
+    width: 60%;
+    transition: width 0.3s;
+}
+
+#feedback:hover {
+    background-color: #ffffff;
+    box-shadow: 1px 1px 8px 4px #0c4b8e35, 4px 4px 7px 0 #ccc;
+    width: 61%;
+}
+
+.previousRestaurant {
+    position: absolute;
+    top: 58px;
+    right: 60px;
+
+}
+
+#default{
+    color: lightgray;
+}
+
+.previousRestaurant select {
+    width: 100%;
+    outline: none;
+    padding: 12px;
+    font-size: 22px;
+    border: 0.1px solid rgba(27, 27, 132, 0.212);
+    box-sizing: border-box;
+    appearance: none;
+    cursor: pointer;
+    background-color: #f4f4f4;
+    color: rgb(27, 27, 139);
+}
+.previousRestaurant select:hover{
+    background-color: #ffffff;
+    box-shadow: 1px 1px 8px 4px #0c4b8e35, 4px 4px 7px 0 #ccc;
+   
+}
+.previousRestaurant select:focus{
+    background-color: #ffffff;
+    box-shadow: 1px 1px 8px 4px #0c4b8e35, 4px 4px 7px 0 #ccc;
+   
+}
+
+i {
+    font-size: 15px;
+    font-style: italic;
+}
+
+
+/* Arrow styling */
+.previousRestaurant::after {
+    content: '';
+    background-image: url(images/arrow.png);
+    background-size: 50px; /* Adjust the size of the image */
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 40%;
+    right: 43px; /* the distance of the image from the right */
+    width: 40px; /* the width of the image */
+    height: 55px; /* the height of the image */
+}
+
+#photo {
+    position: absolute;
+    top: 20%;
+    right: 450px; /* the distance of the image from the right */
+    width: 40px; /* the width of the image */
+    height: 55px; /* the height of the image */
+}

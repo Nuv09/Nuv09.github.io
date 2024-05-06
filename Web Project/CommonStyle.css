@@ -1,0 +1,114 @@
+  /* Style main */
+main { 
+  background-color: #fff;
+}
+/* body Styles */
+         
+       
+.intro {
+  font-size: 200%; 
+  font-weight: lighter; 
+  padding: 2% 0;
+  color: #FFF;
+  background-image: url(images/Owner.png);
+  background-size: cover;
+  height: 150px;     
+}
+
+.intro2 {
+  font-size: 200%; 
+  font-weight: lighter; 
+  padding: 2% 0;
+  color: #FFF;
+  background-image: url(images/Customer.jpg);
+  background-size: cover;
+  height: 150px;     
+}
+      
+#Owner_Dashboard { 
+  border-bottom: solid;
+  border-width: 5px;
+  width: 8.5em;
+  text-align: center;
+}
+
+#Cuisine { 
+  border-bottom: solid;
+  border-width: 5px;
+  width: 4em;
+  text-align: center;
+}
+
+#Offers {
+  border-bottom: solid;
+  border-width: 5px;
+  width: 3.5em;
+  text-align: center;
+}
+
+#My_review {
+  border-bottom: solid;
+  border-width: 5px;
+  width: 5em;
+  text-align: center;
+}
+
+.Meals_intro {
+  font-size: 200%; 
+  font-weight: lighter; 
+  background-color: var(--rest-color);
+}
+
+#Meals {
+  border-bottom: solid;
+  border-color: var(--button1);
+  border-width: 5px;
+  width: 3em;
+  text-align: center;
+  color: var(--button1);
+  margin-left: 2%;
+}
+
+.Form_intro {
+  font-size: 200%; 
+  font-weight: lighter; 
+  background-color: var(--rest-color);
+}
+
+.Form1 {
+  border-bottom: solid;
+  border-color: var(--button1);
+  border-width: 5px;
+  width: 8em;
+  text-align: center;
+  color: var(--button1);
+  margin-left: 2%;
+}
+     
+     
+/* Style for buttons */
+.buttons-container {
+  text-align: right;
+  background-color: var(--rest-color);
+}
+
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin: 10px 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--button1) ; 
+  color: var(--font-color1);
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button:hover {
+  background-color: #9489a8;
+  box-shadow: -1px 7px 15px #ccc;
+     
+}  

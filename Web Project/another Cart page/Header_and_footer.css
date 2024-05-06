@@ -1,0 +1,156 @@
+/* Style for Navigation */
+* {
+    font-family: 'Didot';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.global {
+    display: flex;
+    justify-content: center;
+    background-image: url(images/Nav.png);
+    background-size: cover;
+    text-align: center;
+    padding-bottom: 1%;
+    box-shadow: -1px 6px 15px #765ca1;
+    align-items: flex-end;
+}
+  
+.global ul {
+    list-style-type: none;
+    background-color: #30155b;
+    border-radius: 20px;
+
+}
+  
+.global li {
+    float: left;
+    font-size: 1em;
+    font-weight: bold;
+}
+  
+.global li a {
+    display: flex;
+    color: #FFF;
+    border-radius: 20px;
+    text-align: center;
+    padding: 14px 127px;
+    text-decoration: none;
+    transition: 1s;
+}
+  
+.global li a:hover {
+    background-color: #c1b4ff;
+    border-radius: 20px;
+    border: solid;
+    transform: scale(1.11,1.11);
+    color: #140132;
+}
+  
+.global .active {
+    color: #140132;
+    border: solid;
+    background-color: #c1b4ff;
+    border-radius: 20px;
+}
+
+#logo {
+    width: 150px;
+    height: 160px;
+    margin-top: 10px;
+}
+
+
+/* Style for header and breadcrumbs */
+
+.breadcrumbs {
+    padding-bottom: 3em;
+    padding : 1em 2em;
+}
+
+.breadcrumbs li {
+    display: inline;
+    margin: 0 5px;
+    color: #c1b4ff;  
+}
+   
+.breadcrumbs li:not(:first-child):before {
+    content: ">";
+    margin: 0 6px;
+    text-decoration: none;
+}
+   
+.breadcrumbs li a {
+    text-decoration: none;
+    color: #c1b4ff;
+}
+
+.breadcrumbs li.current {
+    color: #FFF;
+    font-weight: bold;
+
+}
+
+.breadcrumbs li a:hover {
+    text-decoration: underline;
+    color: #c1b4ff;
+}
+
+body {
+    background-color: #30155b;
+}
+
+/* Style for footer */
+
+footer {
+    background-color: #140132;
+    color: #FFF;
+    line-height: 3em;
+    font-size: small;
+    font-weight: bold;
+    text-align: left;
+    padding: 30px 0 20px;
+}
+
+.socials {
+    display: flex;
+    justify-content: left;
+    padding-left: 18px;
+}
+
+.socials a {
+    padding: 5px;
+    background-color: #c1b4ff;
+    margin: 5px;
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+}
+
+
+#Contact {
+    padding-left: 20px;
+    border-bottom: solid;
+    border-color: #FFF;
+    width: 200px;
+}
+
+
+#Number {
+    padding-left: 20px; 
+}
+
+.Copyright {
+    text-align: center;
+}
+
+.socials a i {
+    font-size: 2em;
+    color: #140132;
+    opacity: 0.9;
+    width: 30px;
+    height: 30px;
+    padding-left: 11%;
+}

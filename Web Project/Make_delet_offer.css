@@ -1,0 +1,159 @@
+/* Style for the custom checkbox container */
+main {
+  background-color: var(--rest-color);
+}
+#checkform {
+  background-color: var(--rest-color);
+}
+
+/* Hide the default checkbox */
+
+.custom-checkbox {
+  width: 40px;
+  height: 15px;
+  border: 2px solid #ccc; /* Changed border color */
+  border-radius: 40px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  background-color: #fff; /* Add background color to make the icon visible */
+  margin-left: auto;
+}
+
+/* Style for the checkmark icon */
+
+input[type="checkbox"] {
+  display: none;
+}
+
+.custom-checkbox::after {
+  content: "";
+  width: 10px;
+  height: 20px;
+  border-right: 3px solid rgb(26, 26, 131); /* Black border for the right side of the checkmark */
+  border-bottom: 3px solid rgb(26, 26, 131); /* Black border for the bottom side of the checkmark */
+  position: absolute;
+  top: -20%;
+  left: 90%;
+  transform: translate(-50%, -50%) rotate(45deg); /* Rotate and center */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Show the checkmark icon when the checkbox is checked */
+input[type="checkbox"]:checked + .custom-checkbox::after {
+  opacity: 1; /* Make it visible */
+}
+/* Change color of checked checkbox */
+input[type="checkbox"]:checked + .custom-checkbox {
+  border-color: rgb(26, 26, 131); /* Changed border color */
+}
+
+/* Align text to the right */
+
+.Choose {
+  color: #ffffff;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(27, 27, 132);
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-left: 5%;
+}
+
+.Choose:hover {
+  background-color: #9489a8;
+  box-shadow: -1px 7px 15px #ccc;
+}
+
+/* ====================================================================================================== */
+/* style offers checkBoxs */
+.offer-list {
+  width: 60%;
+  padding: 30px 60px;
+  margin: 20px 10px;
+  position: relative;
+}
+
+.offers {
+  display: flex;
+  align-items: center;
+  width: 170%;
+  margin-bottom: 20px; /* spacing between each offer */
+}
+
+.offer-list img {
+  width: 150px; /* the width of the images */
+  margin-right: 20px; /* spacing between the image and text */
+  padding: 3px;
+  border-radius: 10px;
+  border-color: rgb(26, 26, 131);
+  height: 100px;
+  box-shadow: 2px 2px 5px #ccc;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  padding: 5px 10px; /*  padding to create space around the offer */
+  padding-right: 20px;
+  border: 1px solid rgba(26, 26, 131, 0.177); /* border around the offer */
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 85%;
+  background-color: #f4f4f4;
+}
+
+.content:hover {
+  box-shadow: 1px 1px 8px 4px #210c8e35, 4px 4px 7px 0 #ccc;
+}
+
+.offer-text {
+  margin-right: 5px; /* spacing between the text and checkbox */
+  font-size: 15px;
+  text-transform: capitalize;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.offer-list input[type="checkbox"] {
+  margin-left: auto; /* Pushing checkbox to the right */
+}
+
+.content {
+  font-family: Georgia, Times, "Times New Roman", serif;
+  text-transform: uppercase;
+  color: #220c8e;
+  width: 45%;
+}
+
+#deleteOffers {
+  position: absolute;
+  top: 30px;
+  right: -20px;
+  width: 150px;
+  padding: 10px 10px;
+  margin: 10px 10px;
+  border: none;
+  border-radius: 20px;
+  background-color: var(--button1);
+  color: var(--font-color1);
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-family: Georgia, Times, "Times New Roman", serif;
+  text-transform: uppercase;
+}
+
+#deleteOffers:hover {
+  background-color: #9489a8;
+  box-shadow: -1px 7px 15px #ccc;
+}

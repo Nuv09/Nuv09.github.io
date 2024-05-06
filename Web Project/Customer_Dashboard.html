@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset = "utf-8">
+    <title>Customer's Dashboard</title>
+    <link rel="stylesheet" href="Customer_Dashboard.css">
+    <link rel="stylesheet" href="Header_and_footer.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body onload="onload()">
+
+     
+       <header>
+        <nav class="global">
+         <img src="images/Logo.png" alt="website logo" id="logo">
+           <ul>
+            <li><a href="index.html" accesskey="h"> Home </a></li>
+            <li><a class="active" href="Customer_Dashboard.html" accesskey="c"> Customer's dashboard </a></li>
+            <li><a href="Owner_Dashboard.html" accesskey="o"> Owner dashboard </a></li>
+          </ul>
+         </nav>
+
+          <ul class="breadcrumbs">
+            <li><a href="index.html"> Home </a></li>
+            <li class="current"> Customer's dashboard </li>
+          </ul>
+          <button onclick="darkmode()" id="icon" type="button" class="Switch-theme">Switch Theme</button>
+       </header>
+
+    <main>
+      
+    <div class="intro">
+        <h1 id="Restaurants">Restaurants</h1> 
+    </div>
+    <div id="currentWeekDate"></div>
+ <!-------------------------------------------------------------------------------------------------------->
+    <div class="flex-container">
+
+      <div class="restaurant" id="show" onmouseover="ShowDisc(this)" onmouseout="HideDisc(this)">
+
+         <a href="Restaurant.html" >  <!-- the icon of the resturant is a link to the resturant page -->
+          <img  src="images/Karazah.png"  alt="Karazah Restaurant" > 
+         </a> 
+
+        <div class="text" >
+          <h3>Karazah</h3> <!--lable-->
+
+          <p class="disc">   
+            At Karazah we are creating a captivating dining experience 
+            through a journey into the world of oriental and Arabic flavors.
+           </p>
+        </div>
+
+
+
+        <div class="rate">
+            4.5
+        </div>
+
+      </div>
+    
+    
+<!---------------------------------------------------------------------------------------------------------->
+
+    <div class="restaurant" onmouseover="ShowDisc(this)" onmouseout="HideDisc(this)">
+
+        <a href="#" >  <!-- the icon of the resturant is a link to the resturant page -->
+       <img src="images/Pizzalicious.png"  alt="Pizzalicious Restaurant" > 
+       </a> 
+
+       <div class="text">
+       <h3>Pizzalicious</h3> <!--lable-->
+       
+       <p class="disc" >
+        Savor delicious pizza at our cozy restaurant! Fresh ingredients, amazing flavors.
+        Come taste the difference!
+       </p>
+    </div>
+
+
+
+    <div class="rate">
+        4.7
+    </div>
+       </div>
+
+<!---------------------------------------------------------------------------------------------------------->
+
+       <div class="restaurant" onmouseover="ShowDisc(this)" onmouseout="HideDisc(this)">
+
+        <a href="#" >  <!-- the icon of the resturant is a link to the resturant page -->
+       <img src="images/Green_Leaf.png"  alt="Green Leaf Restaurant" > 
+       </a> 
+       
+       <div class="text">
+       <h3>Green Leaf</h3> <!--lable-->
+       <p class="disc">
+        Enjoy healthy, delicious meals to fuel your day. fresh salads, nourishing bowls, and more! made with love and care.
+        Eat well, live well at GreenLeaf!
+       </p>
+       </div>
+
+
+
+       <div class="rate">
+            3.5
+        </div>
+
+       </div>
+
+<!---------------------------------------------------------------------------------------------------------->
+
+       <div class="restaurant hide" onmouseover="ShowDisc(this)" onmouseout="HideDisc(this)">
+
+        <a href="#" >  <!-- the icon of the resturant is a link to the resturant page -->
+       <img src="images/Sushiko.png"  alt="Sushiko Restaurant" > 
+       </a> 
+       
+       <div class="text">
+       <h3>Sushiko</h3> <!--lable-->
+
+       <p class="disc">
+        Discover Sushiko, where every bite is a taste of perfection. Indulge in the finest sushi crafted with precision and passion. 
+        Experience sushi bliss at Sushiko today!
+       </p>
+       </div>
+
+       <div class="rate">
+        4.9
+       </div>
+
+       </div>
+
+<!---------------------------------------------------------------------------------------------------------->
+
+       <div class="restaurant hide" onmouseover="ShowDisc(this)" onmouseout="HideDisc(this)">
+
+        <a href="#" >  <!-- the icon of the resturant is a link to the resturant page -->
+       <img src="images/Tandoor.png"  alt="Tandoor Restaurant" > 
+       </a> 
+
+       <div class="text">
+       <h3>Tandoor</h3> <!--lable-->
+
+       <p class="disc">
+        Explore the vibrant taste of India at Tandoor, 
+        where every dish is bursting with flavor and rich spices.       
+       </p>
+       </div>
+
+
+       <div class="rate">
+        4.5
+       </div>
+
+       </div>
+
+<!---------------------------------------------------------------------------------------------------------->
+
+       <div class="restaurant hide" onmouseover="ShowDisc(this)" onmouseout="HideDisc(this)">
+
+        <a href="#" >  <!-- the icon of the resturant is a link to the resturant page -->
+       <img src="images/TastyBites.png"  alt="Tasty Bites Restaurant" > 
+       </a> 
+
+       <div class="text">
+       <h3>Tasty Bites</h3> <!--lable-->
+
+       <p class="disc">
+        Get tasty burgers, fries, and cold drinks!
+        Come enjoy yummy food at our restaurant!
+       </p>
+       </div>
+
+       <div class="rate">
+        3.7
+       </div>
+
+       </div>
+
+<!---------------------------------------------------------------------------------------------------------->
+
+<div class="restaurant hide" onmouseover="ShowDisc(this)" onmouseout="HideDisc(this)" >
+
+    <a href="#" >  <!-- the icon of the resturant is a link to the resturant page -->
+   <img src="images/Noodlery.png"  alt="Noodlery Restaurant" > 
+   </a> 
+
+   <div class="text">
+   <h3>Noodlery</h3> <!--lable-->
+
+   <p class="disc">
+    Dive into a world of tantalizing Asian noodles, 
+    where each dish tells a story of tradition and taste.
+   </p>
+  </div>
+
+  <div class="rate">
+    4.8
+   </div>
+
+   </div>
+<!---------------------------------------------------------------------------------------------------------->
+
+<div class="restaurant hide" onmouseover="ShowDisc(this)" onmouseout="HideDisc(this)" >
+
+    <a href="#" >  <!-- the icon of the resturant is a link to the resturant page -->
+   <img src="images/TacoZone.png"  alt="TacoZone Restaurant" > 
+   </a>
+
+   <div class="text">
+   <h3>TacoZone</h3> <!--lable-->
+
+   <p class="disc">
+    our ultimate destination for authentic Mexican flavors served with a twist.
+   </p>
+   </div>
+
+   <div class="rate" onmouseover="">
+    2.5
+   </div>
+
+   </div>
+
+<!---------------------------------------------------------------------------------------------------------->
+
+<div class="restaurant hide" onmouseover="ShowDisc(this)" onmouseout="HideDisc(this)" >
+
+    <a href="#" >  <!-- the icon of the resturant is a link to the resturant page -->
+   <img src="images/ShawarmaBite.png"  alt="Shawarma Bite Restaurant" > 
+   </a> 
+
+   <div class="text">
+   <h3>Shawarma Bite</h3> <!--lable-->
+
+   <p class="disc">
+    Home of delicious shawarma wraps made just the way you like them.
+   </p>
+</div>
+
+   <div class="rate">
+    4.5
+   </div>
+</div>
+
+   </div>
+
+   <button onclick="HideResturant()" id="more">show more</button>
+
+   <div id="currentWeekDate"></div>
+</main>
+
+<footer>
+    <p id="Contact"> Contact with us</p>
+    <p id="Number"> +993 05533033560 </p>
+    <div class="socials">        
+        <a href="#"><i class="fa fa-twitter"></i></a> 
+        <a href="#"><i class="fa fa-facebook"></i></a> 
+        <a href="#"><i class="fa fa-instagram"></i></a>
+    </div>
+    <p class="Copyright"> Copyright &copy; 2024 2Eat. All Rights Reserved</p>
+</footer>
+
+
+<script src="script.js"></script>
+<script>
+
+function HideResturant() {
+  var elements = document.getElementsByClassName("hide"); 
+  for (var i = 0; i < elements.length; i++) { 
+    var element = elements[i];
+    if (element.style.display === "none" ){
+      element.style.display = "block"; 
+    } else {
+      element.style.display = "none"; 
+    }
+  }
+}
+
+
+function ShowDisc(element) {
+        var x = element.querySelector('.disc');
+        if (x.style.display === "none" || x.style.display === "") {
+            x.style.display = "block"; 
+        } else {
+            x.style.display = "none"; 
+        }
+    }
+
+    function HideDisc(element) {
+        var x = element.querySelector('.disc');
+        x.style.display = "none"; 
+    }
+
+
+    function displayCurrentWeekDate() {
+        const today = new Date();
+        const dayOfWeek = today.getDay(); 
+        const diff = today.getDate() - dayOfWeek; 
+        const sundayDate = new Date(today.setDate(diff)); 
+        const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+        const formattedDate = sundayDate.toLocaleDateString('en-US', options);
+        document.getElementById('currentWeekDate').textContent = ` ${formattedDate}`;
+    }
+
+    
+    displayCurrentWeekDate();
+</script>
+
+</body>
+
+
+</html>

@@ -1,0 +1,360 @@
+.intro {
+    font-size: 200%; 
+    font-weight: lighter; 
+    padding: 2% 0;
+    color: #FFF;
+    background-image: url(images/Customer.jpg);
+    background-size: cover;
+    height: 150px;
+}
+
+main {
+background-color: var(--rest-color);
+}
+
+
+#menu { 
+    border-bottom: solid;
+    border-width: 5px;
+    width: 3em;
+    text-align: center;
+}
+
+
+.category {
+  display: flex;
+	position: relative;
+	background-color: #c1b4ff;
+  align-items: center;
+  text-align: center;
+	height: 50px;
+  width: 100%;
+  border-radius: 10px;
+}
+
+
+.category a {
+	line-height: 50px;
+	height: 100%;
+	font-size: 15px;
+	display: inline-block;
+	position: relative;
+	z-index: 1;
+	text-decoration: none;
+	text-transform: uppercase;
+	text-align: center;
+	color: #30155b;
+	cursor: pointer;
+  font-weight: bold;
+
+}
+.category .animation {
+	position: absolute;
+	height: 100%;
+	top: 0;
+	z-index: 0;
+	transition: all .5s ease 0s;
+	border-radius: 10px;
+}
+.category a:nth-child(1) {
+	width: 390px;
+}
+.category a:nth-child(2) {
+	width: 390px;
+}
+.category a:nth-child(3) {
+	width: 390px;
+}
+
+
+.category .start-Main_Courses,.category a:nth-child(1):hover~.animation {
+	width: 390px;
+	left: 0;
+	background-color: lavender;
+}
+.category .start-Desserts,.category a:nth-child(2):hover~.animation {
+	width: 390px;
+	left: 390px;
+	background-color: lavender;
+}
+.category .start-Drinks,.category a:nth-child(3):hover~.animation {
+	width: 390px;
+	left: 794px;
+	background-color: lavender;
+}
+
+.cart_button {
+  width: 90px;
+  height: 90px;
+}
+
+#checkform {
+ background-color: var(--rest-color) ;
+}
+
+.meals {
+  background-color: var(--rest-color);
+  display: flex;
+  justify-content: center;
+}
+
+
+.sort {
+  position: relative;
+  margin-bottom: 20px;
+  width: 10em;
+  left: 75%;
+  background-color: var(--rest-color) ;
+}
+
+#default{
+  color: lightgray;
+}
+
+.sort select {
+  width: 10em;
+  outline: none;
+  padding: 12px;
+  font-size: 22px;
+  border: 0.1px solid rgba(27, 27, 132, 0.212);
+  box-sizing: border-box;
+  appearance: none;
+  cursor: pointer;
+  background-color: #f4f4f4;
+  color: rgb(27, 27, 139);
+}
+
+.sort select:hover{
+  background-color: #ffffff;
+  box-shadow: 1px 1px 8px 4px #0c4b8e35, 4px 4px 7px 0 #ccc;
+ 
+}
+
+.sort select:focus{
+  background-color: #ffffff;
+  box-shadow: 1px 1px 8px 4px #0c4b8e35, 4px 4px 7px 0 #ccc;
+ 
+}
+
+.sort::after {
+  content: "";
+  background-image: url(images/arrow.png);
+  background-size: 50px; /* Adjust the size of the image */
+  background-repeat: no-repeat;
+  position: absolute;
+  top: 40%;
+  left: 170px; /* the distance of the image from the right */
+  width: 40px; /* the width of the image */
+  height: 55px; /* the height of the image */
+}
+
+#sort_label {
+  font-family: Georgia, Times, 'Times New Roman', serif;
+  text-transform: uppercase;
+  color: var(--button1);
+  font-size: 22px;
+  display: block;
+  margin-bottom: 5px;
+}
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    background-color: var(--rest-color);
+    justify-content: space-evenly;
+    padding: 2%;
+    position: relative;
+    bottom: 100px;
+    width: 70%;
+}
+
+
+.meal-image { 
+    width: 170px;
+    height: 170px;
+    border-radius: 5px;
+    border: 2px solid #fafafa; 
+    box-shadow: 2px 2px 4px rgba(72, 72, 72, 0.748);
+}
+
+.calorie {
+    font-weight: bold;
+}
+
+.quantity {
+  position: relative;
+  top: 120px;
+  margin-left: auto; 
+  width: 29%;
+}
+
+.number {
+  width: 30px;
+}
+
+.add-to-cart {
+  color: #FFFFFF;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(27, 27, 132) ; 
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-right: 5%;
+}
+
+
+
+input[type="checkbox"] {
+display: inline-block;
+}
+
+.custom-checkbox  {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc; /* Changed border color */
+  border-radius: 40px;
+  cursor: pointer;
+  display: none;
+  vertical-align: middle;
+  position: relative;
+  background-color: #fff; /* Add background color to make the icon visible */
+  margin-left:auto;
+}
+
+/* Style for the checkmark icon */
+.custom-checkbox::after {
+  content: "";
+  width: 10px;
+  height: 20px;
+  border-right: 3px solid rgb(26, 26, 131); /* Black border for the right side of the checkmark */
+  border-bottom: 3px solid rgb(26, 26, 131); /* Black border for the bottom side of the checkmark */
+  position: absolute;
+  top: -8%;
+  left: 67%;
+  transform: translate(-50%, -50%) rotate(45deg); /* Rotate and center */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Show the checkmark icon when the checkbox is checked */
+input[type="checkbox"]:checked + .custom-checkbox::after {
+  opacity: 1; /* Make it visible */
+}
+/* Change color of checked checkbox */
+input[type="checkbox"]:checked + .custom-checkbox {
+  border-color: rgb(26, 26, 131); /* Changed border color */
+}
+
+button {
+  color: #FFFFFF;
+  padding: 5px 8px;
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(27, 27, 132) ; 
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #9489a8;
+  box-shadow: -1px 7px 15px #ccc;
+}
+
+.meal {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3%;
+  margin-left: 2%;
+  min-width: 100%;
+  max-width: 100%;
+  font-size: 110%;
+  color: #140132;
+  background-color: #dcd5ff;
+  border: solid;
+  border-radius: 25px;
+  border-width: 5px;
+  height: 10%;
+  box-shadow: -1px 4px 15px #765ca1;
+  line-height: 1.5em;
+  padding: 2%;
+  justify-content: space-evenly;
+  transition: 1s;
+  text-align: left;
+}
+
+.meal:hover {
+  transform: scale(1.05,1.05);
+}
+
+.item-price {
+    text-align: left;
+    font-weight: bold;
+    position: relative;
+    left: 270px;
+}
+
+
+.text {
+    color: black;
+    width: 250px;
+    padding-right: 2%;
+    padding-left: 3%;
+
+}
+
+main {
+    background-color:#FFF ;
+}
+	
+.filter-buttons {
+		display: flex;
+    flex-wrap: wrap;
+    background-color: #c1b4ff;
+    justify-content: center;
+}
+
+
+.Meals_intro {
+  font-size: 200%; 
+  font-weight: lighter; 
+  background-color: var(--rest-color);
+  margin-bottom: 3%;
+}
+
+#Main_Courses {
+  border-bottom: solid;
+  color: var(--button1);
+  border-width: 5px;
+  width: 6em;
+  text-align: center;
+  color: var(--button1);
+  margin-left: 2%;
+}
+
+#Desserts {
+  border-bottom: solid;
+  color: var(--button1);
+  border-width: 5px;
+  width: 6em;
+  text-align: center;
+  color: var(--button1);
+  margin-left: 2%;
+}
+
+#Drinks {
+  border-bottom: solid;
+  color: var(--button1);
+  border-width: 5px;
+  width: 6em;
+  text-align: center;
+  color: var(--button1);
+  margin-left: 2%;
+}
